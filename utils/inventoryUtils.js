@@ -253,12 +253,12 @@ async function typeMain(embed, playerId) {
         rankingTitle = "Zalim";
 
     embed.addFields(
-        { name: 'HP <:Heartt:1213558654251569292>', value: `${playerInfo.health}/${playerInfo.max_health} (${percHealth}%)`, inline: true },
+        { name: 'HP <:Heartt:1213561237623935058>', value: `${playerInfo.health}/${playerInfo.max_health} (${percHealth}%)`, inline: true },
         { name: 'Sınıf', value: classData[playerInfo.class].name, inline: true },
         { name: 'Eğitim', value: charSkillType, inline: true },
         { name: 'Level ' + playerInfo.level, value: "Exp: " + playerInfo.exp + "/" + expToNextLevel + ` (${percExp}%)` + "\n" + expBar },
         //{ name: 'Energy', value: energyBar },
-        { name: 'Para <:Yang:1213556048191815711>', value: playerInfo.money + ' yang', inline: true },
+        { name: 'Para <:Yang:1213561224734842910>', value: playerInfo.money + ' yang', inline: true },
         { name: rankingTitle, value: "Derece: " +playerInfo.rankPoints, inline: true },
         { name: 'Bölge', value: zoneName }
     );
