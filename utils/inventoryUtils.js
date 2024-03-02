@@ -263,15 +263,14 @@ async function typeMain(embed, playerId) {
         { name: 'Bölge', value: zoneName }
     );
 
-    if(classData[playerInfo.class].name = "Savaşçı")
-        var charClassImage = "https://tr-wiki.metin2.gameforge.com/images/thumb/e/e8/Sava%C5%9F%C3%A7%C4%B1_Erkek_Logo_%28yeni%29.png/38px-Sava%C5%9F%C3%A7%C4%B1_Erkek_Logo_%28yeni%29.png";
-    else if(classData[playerInfo.class].name = "Ninja")
-        var charClassImage = "https://tr-wiki.metin2.gameforge.com/images/thumb/f/f9/Ninja_Erkek_Logo_%28yeni%29.png/38px-Ninja_Erkek_Logo_%28yeni%29.png";
-    else if(classData[playerInfo.class].name = "Sura")
-        var charClassImage = "https://tr-wiki.metin2.gameforge.com/images/thumb/4/46/Sura_Erkek_Logo_%28yeni%29.png/38px-Sura_Erkek_Logo_%28yeni%29.png";
-    else if(classData[playerInfo.class].name = "Şaman")
-        var charClassImage = "https://tr-wiki.metin2.gameforge.com/images/thumb/b/bb/%C5%9Eaman_Erkek_Logo_%28yeni%29.png/38px-%C5%9Eaman_Erkek_Logo_%28yeni%29.png";
-    embed.setThumbnail(charClassImage);
+    if(classData[playerInfo.class].name == "Savaşçı")
+        embed.setThumbnail("https://tr-wiki.metin2.gameforge.com/images/thumb/e/e8/Sava%C5%9F%C3%A7%C4%B1_Erkek_Logo_%28yeni%29.png/38px-Sava%C5%9F%C3%A7%C4%B1_Erkek_Logo_%28yeni%29.png");
+    else if(classData[playerInfo.class].name == "Ninja")
+        embed.setThumbnail("https://tr-wiki.metin2.gameforge.com/images/thumb/f/f9/Ninja_Erkek_Logo_%28yeni%29.png/38px-Ninja_Erkek_Logo_%28yeni%29.png");
+    else if(classData[playerInfo.class].name == "Sura")
+        embed.setThumbnail("https://tr-wiki.metin2.gameforge.com/images/thumb/4/46/Sura_Erkek_Logo_%28yeni%29.png/38px-Sura_Erkek_Logo_%28yeni%29.png");
+    else if(classData[playerInfo.class].name == "Şaman")
+        embed.setThumbnail("https://tr-wiki.metin2.gameforge.com/images/thumb/b/bb/%C5%9Eaman_Erkek_Logo_%28yeni%29.png/38px-%C5%9Eaman_Erkek_Logo_%28yeni%29.png");
 
     return { embed: embed };
 }
