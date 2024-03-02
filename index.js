@@ -11,6 +11,11 @@ const client = new Client({
     GatewayIntentBits.MessageContent]});
 
 const { setup } = require('./setup.js');
+const express = require('express');
+const app = express();
+const port = 8080;
+app.get('/', (req, res) => res.send('Bot aktif!'));
+app.listen(port, () => console.log(`Bot şu adreste çalışıyor. http://localhost:${port}`));
 setup(client);
 
 // Setup mongo
