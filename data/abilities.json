@@ -93,7 +93,7 @@
   },
   "default": {
     "name": "Düz Vuruş",
-    "number":5,
+    "number":1,
     "aim": "enemy-single",
     "description": "Düz bir saldırı. Basit ama etkili.",
     "effects": {
