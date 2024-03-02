@@ -38,7 +38,7 @@
     },
     "yabaniUsak": {
         "name": "Yabani Uşak",
-        "picture": "https://tr-wiki.metin2.gameforge.com/images/8/8a/Yabani_U%C5%9Fak.png",
+        "picture": "https://i.hizliresim.com/by6ka5o.png",
         "exp": 8,
         "money": 5,
         "base_stats": {
@@ -111,7 +111,7 @@
     },
     "vahsiOkcu": {
         "name": "Vahşi Okçu",
-        "picture": "https://tr-wiki.metin2.gameforge.com/images/9/96/Vah%C5%9Fi_Ok%C3%A7u.png",
+        "picture": "https://i.hizliresim.com/o3oq1jd.png",
         "exp": 9,
         "money": 8,
         "base_stats": {
@@ -148,7 +148,7 @@
     },
     "b_VahsiUzman": {
         "name": "[Patron]Vahşi Uzman",
-        "picture": "https://tr-wiki.metin2.gameforge.com/images/3/3b/Vah%C5%9Fi_Uzman.png",
+        "picture": "https://i.hizliresim.com/b01idmd.png",
         "exp": 30,
         "money": 50,
         "base_stats": {
@@ -185,7 +185,7 @@
     },
     "siyahRuzgarAskeri": {
         "name": "Siyah Rüzgar Askeri",
-        "picture" : "https://tr-wiki.metin2.gameforge.com/images/b/bb/Siyah_R%C3%BCzgar_Askeri.png",
+        "picture" : "https://i.hizliresim.com/qmk7j3n.png",
         "exp": 9,
         "money": 9,
         "base_stats": {
@@ -227,7 +227,7 @@
     },
     "yavru_orumcek": {
         "name": "Yavru Örümcek",
-        "picture": "https://tr-wiki.metin2.gameforge.com/images/9/9c/Yavru_%C3%96r%C3%BCmcek.png",
+        "picture": "https://i.hizliresim.com/9tzyltz.png",
         "exp": 10,
         "money": 12,
         "base_stats": {
@@ -268,7 +268,7 @@
     },
     "vahsi_akrep_adam": {
         "name": "Vahşi Akrep Adam",
-        "picture" : "https://tr-wiki.metin2.gameforge.com/images/4/47/Vah%C5%9Fi_Akrep_Adam.png",
+        "picture" : "https://i.hizliresim.com/65juzs4.png",
         "exp": 12,
         "money": 15,
         "base_stats": {
@@ -309,8 +309,7 @@
     },
     "col_haydutu": {
         "name": "Çöl Haydutu",
-        "picture": "https://tr-wiki.metin2.gameforge.com/images/c/c5/%C3%87%C3%B6l_Haydutu.png",
-        "exp": 55,
+        "picture": "https://i.hizliresim.com/fka9ulu.png",
         "money": 50,
         "base_stats": {
             "strength": 15,
