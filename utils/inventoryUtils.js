@@ -7,21 +7,21 @@ const equip = require('./equipUtils.js');
 const ability = require('./abilityUtils.js');
 
 
-exports.getInventoryString = function(inventory) {
+exports.getInventoryString = function (inventory) {
     let rawdata = fs.readFileSync('./data/items.json');
     let items = JSON.parse(rawdata);
 
-    if(inventory == undefined)
+    if (inventory == undefined)
         return "ERROR_UNDEFINED_INVENTORY";
 
     var inventoryDisplay = "";
-    if(Object.keys(inventory).length != 0)
+    if (Object.keys(inventory).length != 0)
         try {
-            for(const [key, value] of Object.entries(inventory)) {
+            for (const [key, value] of Object.entries(inventory)) {
                 inventoryDisplay += `${items[key].name} (x${value.quantity})\n`;
             }
             return inventoryDisplay;
-        } catch(err) {
+        } catch (err) {
             console.log(err);
             return "ERROR_UNDEFINED_ITEM";
         }
@@ -35,18 +35,18 @@ exports.getInventoryString = function(inventory) {
  * @param {*} item item to give
  * @param {*} quantity quantity of the item to give
  */
-exports.giveItem = async function(playerId, item, quantity, channel) {
+exports.giveItem = async function (playerId, item, quantity, channel) {
     const playerCollection = Client.mongoDB.db('player-data').collection(playerId);
 
     // Querying the inventory in the database
     const inventory = await playerCollection.findOne(
-        {name: "inventory"}, 
-        {projection: {_id: 0, abilities: 0, activeAbilities: 0, stats: 0, equipment: 0}}
+        { name: "inventory" },
+        { projection: { _id: 0, abilities: 0, activeAbilities: 0, stats: 0, equipment: 0 } }
     );
-    
+
     // If the item is already in the inventory, we add the quantity to the existing one
     // Else, we create a new entry for the item
-    if(inventory.items[item] != undefined) {
+    if (inventory.items[item] != undefined) {
         var int1 = parseInt(quantity);
         var int2 = parseInt(inventory.items[item].quantity);
         var int3 = int1 + int2;
@@ -61,9 +61,9 @@ exports.giveItem = async function(playerId, item, quantity, channel) {
     }
 
     // Updating the inventory in the database
-    playerCollection.updateOne({name: "inventory"}, { $set: { items: inventory.items } }, { upsert: true });
+    playerCollection.updateOne({ name: "inventory" }, { $set: { items: inventory.items } }, { upsert: true });
 
-    if(channel != undefined) {
+    if (channel != undefined) {
         const embed = new EmbedBuilder()
             .setDescription(`<@${playerId}> received ${quantity} ${item}!`)
             .setColor(0xFFFFFF);
@@ -78,18 +78,18 @@ exports.giveItem = async function(playerId, item, quantity, channel) {
     console.groupEnd();
 }
 
-exports.giveEquipment = async function(playerId, equipment, quantity) {
+exports.giveEquipment = async function (playerId, equipment, quantity) {
     const playerCollection = Client.mongoDB.db('player-data').collection(playerId);
 
     // Querying the inventory in the database
     const inventory = await playerCollection.findOne(
-        {name: "inventory"},
-        {projection: {equipItems : 1}}
+        { name: "inventory" },
+        { projection: { equipItems: 1 } }
     );
 
     // If the item is already in the inventory, we add the quantity to the existing one
     // Else, we create a new entry for the item
-    if(inventory.equipItems[equipment] != undefined) {
+    if (inventory.equipItems[equipment] != undefined) {
         var int1 = parseInt(quantity);
         var int2 = parseInt(inventory.equipItems[equipment].quantity);
         var int3 = int1 + int2;
@@ -104,7 +104,7 @@ exports.giveEquipment = async function(playerId, equipment, quantity) {
     }
 
     // Updating the inventory in the database
-    playerCollection.updateOne({name: "inventory"}, { $set: { equipItems: inventory.equipItems  } }, { upsert: true });
+    playerCollection.updateOne({ name: "inventory" }, { $set: { equipItems: inventory.equipItems } }, { upsert: true });
 
     console.groupCollapsed("Equipment Given");
     console.log(`Given to: ${playerId}`);
@@ -114,10 +114,10 @@ exports.giveEquipment = async function(playerId, equipment, quantity) {
     return inventory.equipItems[equipment].quantity;
 }
 
-exports.buyEq = async function(playerId, equipId, type) {
+exports.buyEq = async function (playerId, equipId, type) {
     const equipment = equip.get(equipId, type);
 
-    if(equipment == null) {
+    if (equipment == null) {
         console.log("ERROR: Tried to give an equip that doesn't exist.");
         return false;
     }
@@ -125,8 +125,8 @@ exports.buyEq = async function(playerId, equipId, type) {
     const playerCollection = Client.mongoDB.db('player-data').collection(playerId);
 
     const query = { name: "inventory" };
-    const options = { 
-        projection: {equipItems: 1},
+    const options = {
+        projection: { equipItems: 1 },
         upsert: true,
     };
 
@@ -136,7 +136,7 @@ exports.buyEq = async function(playerId, equipId, type) {
 
     inv.equipItems.push(equipment);
 
-    const update = { $set: { equipItems: inv.equipItems }};
+    const update = { $set: { equipItems: inv.equipItems } };
 
 
     playerCollection.updateOne(query, update, options);
@@ -144,11 +144,11 @@ exports.buyEq = async function(playerId, equipId, type) {
     console.log("[DEBUG] " + equipment.name + " added to " + playerId + "'s inventory.");
 }
 
-exports.display = async function(player, interaction, type, ack) {
+exports.display = async function (player, interaction, type, ack) {
     let embed = new EmbedBuilder();
     const playerId = player.id;
-    embed.setAuthor({name: player.username, iconUrl: interaction.user.avatarURL})
-    .setThumbnail(interaction.user.displayAvatarURL());
+    embed.setAuthor({ name: player.username, iconUrl: interaction.user.avatarURL })
+        .setThumbnail(interaction.user.displayAvatarURL());
     const componentList = [];
 
     const row = new ActionRowBuilder();
@@ -156,7 +156,7 @@ exports.display = async function(player, interaction, type, ack) {
     componentList.push(row);
     const buttons = new ActionRowBuilder();
 
-    switch(type) {
+    switch (type) {
         case "items":
             embed = (await typeItems(embed, playerId)).embed;
             break;
@@ -179,17 +179,17 @@ exports.display = async function(player, interaction, type, ack) {
     }
 
     try {
-        if(buttons.components.length > 0)
+        if (buttons.components.length > 0)
             componentList.push(buttons);
 
         //console.log(buttons);
-        interaction.message.edit({ embeds: [embed], components: componentList});
-        if(ack)
+        interaction.message.edit({ embeds: [embed], components: componentList });
+        if (ack)
             interaction.deferUpdate();
-    } catch(err) {
+    } catch (err) {
         console.log(err);
     }
-    
+
 }
 
 exports.typeMain = typeMain;
@@ -198,62 +198,81 @@ async function typeMain(embed, playerId) {
     const playerStats = await player.getData(playerId, "stats");
     const playerStory = await player.getData(playerId, "story");
 
-     // Experience progress bar
-     var expBar = "";
-     var expToNextLevel = calculateExpToNextLevel(playerInfo.level);
-     var expBarLength = Math.floor((playerInfo.exp / expToNextLevel) * 10);
-     for(var i = 0; i < expBarLength; i++) {
-         expBar += "▰";
-     }
-     for(var i = expBarLength; i < 10; i++) {
-         expBar += "▱";
-     }
+    // Experience progress bar
+    var expBar = "";
+    var expToNextLevel = calculateExpToNextLevel(playerInfo.level);
+    var expBarLength = Math.floor((playerInfo.exp / expToNextLevel) * 10);
+    for (var i = 0; i < expBarLength; i++) {
+        expBar += "▰";
+    }
+    for (var i = expBarLength; i < 10; i++) {
+        expBar += "▱";
+    }
 
-     var energyBar = "";
-     for(var i = 0; i < playerInfo.energy; i++) {
-            energyBar += "▰";
-    } 
-    for(var i = 0; i < 3-playerInfo.energy ; i++) {
+    var energyBar = "";
+    for (var i = 0; i < playerInfo.energy; i++) {
+        energyBar += "▰";
+    }
+    for (var i = 0; i < 3 - playerInfo.energy; i++) {
         energyBar += "▱";
     }
 
 
-    const percHealth = Math.round((playerInfo.health / playerInfo.max_health)*100);
-    const percExp = Math.floor(playerInfo.exp/expToNextLevel*100);
+    const percHealth = Math.round((playerInfo.health / playerInfo.max_health) * 100);
+    const percExp = Math.floor(playerInfo.exp / expToNextLevel * 100);
 
     const skillTypes = JSON.parse(fs.readFileSync("./data/skillTypes.json", "utf8"))[playerInfo.class];
     const skillType = playerInfo.skillType;
     let charSkillType = "Yok";
-    if(skillType != undefined){
-      charSkillType = skillTypes[skillType].name;
+    if (skillType != undefined) {
+        charSkillType = skillTypes[skillType].name;
     }
-  
+
     const zone = JSON.parse(fs.readFileSync('./data/zones.json'))[playerStory.location.zone];
-    if(zone == undefined)
+    if (zone == undefined)
         var zoneName = playerStory.location.zone;
     else
         var zoneName = zone.name;
+
+    var rankingTitle = "Tarafsız";
+    if (playerInfo.rankPoints >= 12000)
+        rankingTitle = "Kahraman";
+    else if (playerInfo.rankPoints >= 8000)
+        rankingTitle = "Soylu";
+    else if (playerInfo.rankPoints >= 4000)
+        rankingTitle = "İyi";
+    else if (playerInfo.rankPoints >= 1000)
+        rankingTitle = "Arkadaşça";
+    else if (playerInfo.rankPoints < 0)
+        rankingTitle = "Agresif";
+    else if (playerInfo.rankPoints <= -4000)
+        rankingTitle = "Hileli";
+    else if (playerInfo.rankPoints <= -8000)
+        rankingTitle = "Kötü Niyetli";
+    else if (playerInfo.rankPoints <= -12000)
+        rankingTitle = "Zalim";
 
     embed.addFields(
         { name: 'HP', value: `${playerInfo.health}/${playerInfo.max_health} (${percHealth}%)`, inline: true },
         { name: 'Sınıf', value: classData[playerInfo.class].name, inline: true },
         { name: 'Eğitim', value: charSkillType, inline: true },
-        { name: 'Level ' + playerInfo.level, value: "Exp: " + playerInfo.exp + "/" + expToNextLevel + ` (${percExp}%)` +"\n" + expBar },
+        { name: 'Level ' + playerInfo.level, value: "Exp: " + playerInfo.exp + "/" + expToNextLevel + ` (${percExp}%)` + "\n" + expBar },
         //{ name: 'Energy', value: energyBar },
-        { name: 'Para', value: playerInfo.money + ' yang' , inline: true},
+        { name: 'Para', value: playerInfo.money + ' yang', inline: true },
+        { name: rankingTitle, value: "Derece: " +playerInfo.rankPoints, inline: true },
         { name: 'Bölge', value: zoneName }
     );
 
-    return {embed: embed};
+    return { embed: embed };
 }
 
 exports.typeItems = typeItems;
 async function typeItems(embed, playerId) {
     inventory = await player.getData(playerId, "inventory");
 
-    if(Object.keys(inventory.items).length == 0) {
+    if (Object.keys(inventory.items).length == 0) {
         embed.setDescription("Envanterin boş.");
-        return {embed: embed};
+        return { embed: embed };
     }
 
     // Reading the items
@@ -266,15 +285,15 @@ async function typeItems(embed, playerId) {
         description += `${items[key].name} (x${value.quantity}),`;
     }
 
-    if(description == "")
+    if (description == "")
         description = "Empty,";
 
     description = description.slice(0, -1);
 
     embed.setDescription(description);
 
-    return {embed: embed};
-} 
+    return { embed: embed };
+}
 
 exports.typeStats = typeStats;
 async function typeStats(embed, playerId) {
@@ -282,17 +301,17 @@ async function typeStats(embed, playerId) {
     playerEquip = await player.getEquiped(playerId);
 
     embed.addFields(
-        {name: "Canlılık(VIT)", value: playerStats.vitality + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_vit")})`, inline: false},
-      {name: "Zeka(INT)", value: playerStats.intelligence + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_int")})`, inline: true},
-      //{name: "Çeviklik(AGI)", value: playerStats.agility + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_agi")})`, inline: true},
-       //{name: "Dayanıklılık(RES)", value: playerStats.resistance + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_res")})`, inline: true},
+        { name: "Canlılık(VIT)", value: playerStats.vitality + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_vit")})`, inline: false },
+        { name: "Zeka(INT)", value: playerStats.intelligence + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_int")})`, inline: true },
+        //{name: "Çeviklik(AGI)", value: playerStats.agility + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_agi")})`, inline: true},
+        //{name: "Dayanıklılık(RES)", value: playerStats.resistance + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_res")})`, inline: true},
     )
-    .addFields(
-        {name: "Güç(STR)", value: playerStats.strength + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_str")})`, inline: false},
-       {name: "Çeviklik(DEX)", value: playerStats.spirit + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_dex")})`, inline: true},
-    );
+        .addFields(
+            { name: "Güç(STR)", value: playerStats.strength + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_str")})`, inline: false },
+            { name: "Çeviklik(DEX)", value: playerStats.spirit + ` (+${equip.stat.getCombined(playerEquip, "raw_buff_dex")})`, inline: true },
+        );
 
-    return {embed: embed};
+    return { embed: embed };
 }
 
 exports.typeAbilities = typeAbilities;
@@ -303,7 +322,7 @@ async function typeAbilities(embed, playerId, playername) {
     const activeAbilities = playerData.activeAbilities.sort((a, b) => (data[a].number > data[b].number) ? 1 : -1);
 
     embed.setTitle(`${playername} Yetenekleri`)
-         .setFooter({text: 'Yeteneğin hakkında daha fazla şey mi öğrenmek istiyorsun? `mskill "yetenek numarası"` yazarak ulaşabilirsin'})
+        .setFooter({ text: 'Yeteneğin hakkında daha fazla şey mi öğrenmek istiyorsun? `mskill "yetenek numarası"` yazarak ulaşabilirsin' })
 
     try {
         embed.setDescription(abilities.length != 0 ? abilities.map(ability => `\ ${data[ability].number} - ${data[ability].name}`).join("\n ") : "Herhangi bir yeteneğin yok.");
@@ -313,13 +332,13 @@ async function typeAbilities(embed, playerId, playername) {
     }
 
     try {
-        embed.addFields({name: "Aktif Yetenekler", value: ability.getStingActiveAbilities(activeAbilities)});
+        embed.addFields({ name: "Aktif Yetenekler", value: ability.getStingActiveAbilities(activeAbilities) });
     } catch (error) {
         console.error(error);
-        embed.addFields({name: "Aktif Yetenekler", value: "No active ability. (There may be an error!)"});
+        embed.addFields({ name: "Aktif Yetenekler", value: "No active ability. (There may be an error!)" });
     }
 
-    return {embed: embed, components: sendButtonAbility(playerId, abilities.length != 0, activeAbilities.length != 0)};
+    return { embed: embed, components: sendButtonAbility(playerId, abilities.length != 0, activeAbilities.length != 0) };
 }
 
 exports.typeEquipment = typeEquipment;
@@ -327,15 +346,15 @@ async function typeEquipment(embed, playerId) {
     const playerData = await player.getData(playerId, "inventory");
     const equipment = playerData.equiped;
 
-    embed = await equip.getDisplay(playerId, embed, equipment );
+    embed = await equip.getDisplay(playerId, embed, equipment);
 
     const components = [];
     components.push(
-            makeButton("Ekipman Giy", "equip-equip"),
-            makeButton("Çıkar", "equip-unequip"),
-            makeButton("Tümünü Göster"  , "equip-list"));
+        makeButton("Ekipman Giy", "equip-equip"),
+        makeButton("Çıkar", "equip-unequip"),
+        makeButton("Tümünü Göster", "equip-list"));
 
-    return {embed: embed, components: components};
+    return { embed: embed, components: components };
 }
 
 function sendButtonAbility(userId, abilityEnable, activeAbilityEnable) {
@@ -359,18 +378,18 @@ function sendButtonAbility(userId, abilityEnable, activeAbilityEnable) {
 }
 
 exports.addSlider = addSlider;
-function addSlider(playerId) {    
+function addSlider(playerId) {
     const invSelector = new StringSelectMenuBuilder()
         .setCustomId('inventory_selector-' + playerId)
         .setPlaceholder('Herhangi bir şey seçilmedi')
-            .addOptions(
-                [
-                    {label: "Karakter", value: "main", description: "Karakterin durumunu göster!"},
-                    {label: "Envanter", value: "items", description: "Envanterini görüntüle!"},
-                    {label: "Yetenekler", value: "abilities", description: "Karakterinin skillerini gösterir!"},
-                    {label: "Statü", value: "stats", description: "Karakterin statülerini görüntüle!"},
-                    {label: "Ekipmanlar", value: "equipment", description: "Üzerindeki eşyaları düzenle!"},
-                ]
+        .addOptions(
+            [
+                { label: "Karakter", value: "main", description: "Karakterin durumunu göster!" },
+                { label: "Envanter", value: "items", description: "Envanterini görüntüle!" },
+                { label: "Yetenekler", value: "abilities", description: "Karakterinin skillerini gösterir!" },
+                { label: "Statü", value: "stats", description: "Karakterin statülerini görüntüle!" },
+                { label: "Ekipmanlar", value: "equipment", description: "Üzerindeki eşyaları düzenle!" },
+            ]
         )
 
     return invSelector;

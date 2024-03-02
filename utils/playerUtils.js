@@ -79,6 +79,7 @@ exports.create = async function (id, className) {
       health: classData.base_stats.vitality,
       max_health: classData.base_stats.vitality,
       energy: 3,
+      rankPoints: 0,
     },
     {
       name: "stats",
@@ -552,6 +553,24 @@ exports.giveMoney = async function (id, amount) {
 
   return true;
 };
+
+exports.giveRankPoints = async function(id,amount){
+  const playerCollection = Client.mongoDB.db("player-data").collection(id);
+  const info = await this.getData(id, "info");
+  if(info.rankPoints >= 20000){
+    return;
+  }
+  const newPoints = info.rankPoints + amount;
+  if(newPoints > 20000){
+    newPoints = 20000;
+  }
+  const query = { name: "info" };
+
+  const update = { $set: { rankPoints: newPoints } };
+  const options = { upsert: true };
+  const result = await playerCollection.updateOne(query, update, options);
+  return true;
+}
 
 exports.takeMoney = async function (id, amount, message) {
   const playerCollection = Client.mongoDB.db("player-data").collection(id);

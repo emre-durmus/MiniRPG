@@ -713,6 +713,7 @@ exports.rewardLoot = async function(combat, thread) {
                 .setThumbnail("https://i.hizliresim.com/f0wsdcb.png");
             player.exp.award(victor.id, totalExp, thread);
             player.giveMoney(victor.id, totalMoney);
+            player.giveRankPoints(victor.id, combat.team2.length * (Math.floor(Math.random() * (5 - 1) + 1)));
             embed.setDescription(totalExp + " tecrübe puanı ve " + totalMoney + " yang kazandın !");
 
             var lootDescription = "";

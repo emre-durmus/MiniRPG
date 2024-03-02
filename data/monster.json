@@ -310,6 +310,7 @@
     "col_haydutu": {
         "name": "Çöl Haydutu",
         "picture": "https://i.hizliresim.com/fka9ulu.png",
+        "exp": 10,
         "money": 50,
         "base_stats": {
             "strength": 15,
