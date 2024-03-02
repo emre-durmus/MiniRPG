@@ -557,13 +557,16 @@ exports.giveMoney = async function (id, amount) {
 exports.giveRankPoints = async function(id,amount){
   const playerCollection = Client.mongoDB.db("player-data").collection(id);
   const info = await this.getData(id, "info");
+
   if(info.rankPoints >= 20000){
-    return;
+    return true;
   }
-  const newPoints = info.rankPoints + amount;
-  if(newPoints > 20000){
+  
+  var newPoints = info.rankPoints + amount;
+
+  if(newPoints > 20000)
     newPoints = 20000;
-  }
+
   const query = { name: "info" };
 
   const update = { $set: { rankPoints: newPoints } };

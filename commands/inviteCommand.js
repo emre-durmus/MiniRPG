@@ -18,7 +18,7 @@ module.exports = {
             .addComponents(
               new ButtonBuilder()
                   .setLabel("Minimt2'yi sunucuna davet et")
-                  .setURL("https://discord.com/api/oauth2/authorize?client_id=1130763509265874974&permissions=8&scope=bot")
+                  .setURL("https://discord.com/oauth2/authorize?client_id=1213412780208558142&permissions=8&scope=bot")
                   .setStyle(ButtonStyle.Link),
               new ButtonBuilder()
                   .setLabel("Minimt2 Sunucusuna Katıl!")
