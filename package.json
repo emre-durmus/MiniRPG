@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "install": "Yükleme başarılı!",
-    "update": "Güncelleme başarılı!"
+    "install": "npm install -y && npm install discord.js && npm install mongodb",
+    "update": "git pull && npm update discord.js && npm update mongodb"
   },
   "author": "",
   "license": "ISC",
