@@ -1,0 +1,31 @@
+{
+  "name": "minimt2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "install": "Yükleme başarılı!",
+    "update": "Güncelleme başarılı!"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://google.com"
+  },
+  "homepage": "https://google.com",
+  "dependencies": {
+    "@discordjs/builders": "^1.6.3",
+    "@discordjs/collection": "^1.1.0",
+    "@discordjs/rest": "^1.5.0",
+    "discord-api-types": "^0.37.28",
+    "discord.js": "^14.7.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.2",
+    "mongodb": "^4.10"
+  },
+  "devDependencies": {
+    "eslint": "^8.22.0"
+  },
+  "keywords": []
+}

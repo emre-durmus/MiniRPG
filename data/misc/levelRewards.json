@@ -1,0 +1,244 @@
+{
+    "all": {
+        "8": [
+            {
+                "name": "Forgotten Outpost",
+                "type": "region"
+            }
+        ],
+        "4": [
+            {
+                "name": "Slime Lake",
+                "type": "region"
+            }
+        ]
+    },
+    "savasci":{
+        "0": [
+            {
+                "id": "slash",
+                "type": "ability"
+            }
+        ]
+    },
+    "bedensel":{
+        "5": [
+            {
+                "id": "hamle",
+                "type": "ability"
+            },
+            {
+                "id": "kiliccevirme",
+                "type": "ability"
+            },
+            {
+                "id": "ofke",
+                "type": "ability"
+            },
+            {
+                "id": "havakilici",
+                "type": "ability"
+            },
+            {
+                "id": "ucyonlu",
+                "type": "ability"
+            }
+        ]
+    },
+    "zihinsel":{
+        "5": [
+            {
+                "id": "ruhvurusu",
+                "type": "ability"
+            },
+            {
+                "id": "guclubeden",
+                "type": "ability"
+            },
+            {
+                "id": "siddetlivurus",
+                "type": "ability"
+            },
+            {
+                "id": "gucluvurus",
+                "type": "ability"
+            },
+            {
+                "id": "kilicdarbesi",
+                "type": "ability"
+            }
+        ]
+    },
+    "ninja":{
+        "0": [
+            {
+                "id": "slash",
+                "type": "ability"
+            }
+        ]
+    },
+    "yakindovus":{
+      "5": [
+            {
+                "id": "suikast",
+                "type": "ability"
+            },
+            {
+                "id": "bicakcevirme",
+                "type": "ability"
+            },
+            {
+                "id": "hizlisaldiri",
+                "type": "ability"
+            },
+            {
+                "id": "zehirlibulut",
+                "type": "ability"
+            }
+        ]
+    },
+    "uzakdovus":{
+        "5": [
+            {
+                "id": "atesliok",
+                "type": "ability"
+            },
+            {
+                "id": "zehirliok",
+                "type": "ability"
+            },
+            {
+                "id": "tekrarlananatis",
+                "type": "ability"
+            },
+            {
+                "id": "okyagmuru",
+                "type": "ability"
+            }
+        ]
+    },
+    "sura":{
+        "0": [
+            {
+                "id": "slash",
+                "type": "ability"
+            }
+        ]
+    },
+    "buyulusilah":{ 
+        "5": [
+            {
+                "id": "buyulukeskinlik",
+                "type": "ability"
+            },
+            {
+                "id": "buyuluzirh",
+                "type": "ability"
+            },
+            {
+                "id": "dehset",
+                "type": "ability"
+            },
+            {
+                "id": "parmakdarbesi",
+                "type": "ability"
+            },
+            {
+                "id": "ejderhadonusu",
+                "type": "ability"
+            },
+            {
+                "id": "buyucozme",
+                "type": "ability"
+            }
+        ]
+    },
+  "karabuyu":{ 
+        "5": [
+            {
+                "id": "ateshayaleti",
+                "type": "ability"
+            },
+            {
+                "id": "karanlikvurus",
+                "type": "ability"
+            },
+            {
+                "id": "karanlikkure",
+                "type": "ability"
+            },
+            {
+                "id": "karanlikkoruma",
+                "type": "ability"
+            },
+            {
+                "id": "hayaletvurusu",
+                "type": "ability"
+            },
+            {
+                "id": "alevvurusu",
+                "type": "ability"
+            }
+        ]
+    },
+    "saman":{
+        "0": [
+            {
+                "id": "slash",
+                "type": "ability"
+            }
+        ]
+    },
+    "ejderhagucu":{
+        "5": [
+            {
+                "id": "ejderhayardimi",
+                "type": "ability"
+            },
+            {
+                "id": "kutsama",
+                "type": "ability"
+            },
+            {
+                "id": "yansitma",
+                "type": "ability"
+            },
+            {
+                "id": "ejderhakukremesi",
+                "type": "ability"
+            },
+            {
+                "id": "ejderhaatisi",
+                "type": "ability"
+            },
+            {
+                "id": "ucantilsim",
+                "type": "ability"
+            }
+        ]
+    },
+  "iyilestirmeci":{
+        "5": [
+            {
+                "id": "cabukluk",
+                "type": "ability"
+            },
+            {
+                "id": "saldiri",
+                "type": "ability"
+            },
+            {
+                "id": "sifa",
+                "type": "ability"
+            },
+            {
+                "id": "simsekcagirma",
+                "type": "ability"
+            },
+            {
+                "id": "simsekatma",
+                "type": "ability"
+            }
+        ]
+    }
+}

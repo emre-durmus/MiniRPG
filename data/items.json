@@ -1,0 +1,30 @@
+{
+  "kirmizi_iksir": {
+    "name": "Kırmızı İksir",
+    "description": "Can yenilen kırmızı bir iksir"
+  },
+  "orumcek_gozleri": {
+    "name": "Örümcek Gözleri",
+    "description": "Birleşik gözler,koleksiyoncular için son derece popüler."
+  },
+  "seftali_cicegi": {
+    "name": "Şeftali Çiçeği",
+    "description": "Şeftali çiçekleri eskiden cilt kremi yapımında kullanılırdı."
+  },
+  "slimy_crown": {
+    "name": "Demir Kask +0",
+    "description": "A crown made of slime. It's very sticky."
+  },
+  "basic_fang": {
+    "name": "Basic Fang",
+    "description": "A basic fang. It's not very sharp."
+  },
+  "feather": {
+    "name": "Feather",
+    "description": "A light feather."
+  },
+  "warhandbook": {
+    "name": "Savaşçının Elkitabı",
+    "description": "İnsanlar ve canavarlar arasındaki eski bir savaş hakkında bir kitap. Oldukça ağır."
+  }
+}

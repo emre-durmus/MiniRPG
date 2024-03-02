@@ -1,0 +1,148 @@
+{
+    "yongbi_colu": {
+        "name": "Yongbi Çölü",
+        "description": "Bu bölgede birçok tehlikeli örümcek, akrep, yılan ve haydutlar vardır.",
+        "long_description": "Yongbi Çölü, büyük çöl olarakta bilinir. Bu bölgede birçok tehlikeli örümcek, akrep, yılan ve haydutlar vardır.",
+        "color": [144, 238, 144],
+        "required": {
+            "level": 5,
+            "quests": null,
+            "items": []  
+        },
+        "monsters": {
+            "group1": {
+                "m-names": ["yavru_orumcek", "yavru_orumcek"],
+                "spawn-chance": "30"
+            },
+            "group2": {
+                "m-names": ["yavru_orumcek", "vahsi_akrep_adam"],
+                "spawn-chance": "25"
+            },
+            "group3": {
+                "m-names": ["vahsi_akrep_adam", "yavru_orumcek", "vahsi_akrep_adam"],
+                "spawn-chance": "25"
+            },
+            "group4": {
+                "m-names": ["vahsi_akrep_adam", "yavru_orumcek"],
+                "spawn-chance": "15"
+            },
+            "group5": {
+                "m-names": ["col_haydutu"],
+                "spawn-chance": "1",
+                "min_level": 10
+            }
+        },
+        "shops": [""]
+    },
+    "ikincikoy": {
+        "name": "İkinci Köy",
+        "description": "Evrim geçirmiş yarı insan şeklinde birçok canavarı topraklarında barındırır.",
+        "long_description": "Evrim geçirmiş yarı insan şeklinde birçok canavarı topraklarında barındırır,sıkı bir mücadele sizi bekliyor olacak.",
+        "required": {
+            "level": null,
+            "quests": null,
+            "items": []  
+        },
+        "monsters": {
+            "group1": {
+                "m-names": ["siyahRuzgarAskeri"],
+                "spawn-chance": "1"
+            },
+            "group2": {
+                "m-names": ["vahsiOkcu", "vahsiOkcu"],
+                "spawn-chance": "2"
+            },
+            "group3": {
+                "m-names": ["vahsiOkcu", "yabaniUsak"],
+                "spawn-chance": "2"
+            },
+            "group4": {
+                "m-names": ["vahsiOkcu", "siyahRuzgarAskeri"],
+                "spawn-chance": "2"
+            },
+            "group5": {
+                "m-names": ["b_VahsiUzman"],
+                "spawn-chance": "2"
+            }
+        },
+        "shops": ["satici","silahci","zirhci"]
+    },
+    "temple": {
+        "name": "Forgotten Temple",
+        "description": "A temple whose history is unknown.",
+        "required": {
+            "level": 320,
+            "quests": null,
+            "items": []  
+        },
+        "monsters": {
+            "group1": {
+                "m-names": ["bird", "slime", "bird"],
+                "spawn-chance": "50"
+            },
+            "group2": {
+                "m-names": ["bird"],
+                "spawn-chance": "1000000000000"
+            }
+        },
+        "shops": [""]
+    },
+    "birincikoy": {
+        "name": "Birinci Köy",
+        "description": "İnsanlığın son kalesidir. Burada canını yenileyebilirsin.",
+        "long_description": "Maceranız burada başlar. Bu haritada kendini iyileştirebilir ve canını doldurabilirsin.",
+        "color": [210, 180, 140],
+        "required": {
+            "level": 1,
+            "quests": null,
+            "items": []  
+        },
+        "monsters": {
+        },
+        "shops": ["satici","silahci","zirhci"]
+    },
+    "maymun_zindani": {
+        "name": "Maymun Zindanı",
+        "description": "Uzun zaman önce terk edilmiş küçük bir alan.",
+        "required": {
+            "level": 5,
+            "quests": null,
+            "items": []  
+        },
+        "monsters": {
+            "group1": {
+                "m-names": ["shadow_rat", "shadow_rat"],
+                "spawn-chance": "20"
+            },
+            "group2": {
+                "m-names": ["fallen_knight"],
+                "spawn-chance": "20"
+            },
+            "group3": {
+                "m-names": ["col_haydutu"],
+                "spawn-chance": "20"
+            },
+            "group4": {
+                "m-names": ["fallen_archer", "shadow_rat", "shadow_rat"],
+                "spawn-chance": "20"
+            },
+            "group5": {
+                "m-names": ["fallen_knight", "fallen_knight", "lost_soul"],
+                "spawn-chance": "20"
+            }
+        },
+        "shops": []
+    },
+    "cinder_valley": {
+        "name": "Cinder Valley",
+        "description": "The base of the moutain.",
+        "required": {
+            "level": null,
+            "quests": null,
+            "items": []  
+        },
+        "monsters": {
+        },
+        "shops": []
+    }
+}

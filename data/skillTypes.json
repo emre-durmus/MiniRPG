@@ -1,0 +1,42 @@
+{
+  "savasci":{
+    "bedensel": {
+        "name": "Bedensel",
+        "description": "Kılıçları bir büyü ile kutsama yeteneğine sahiptir.Göğüs göğüse savaşmayı tercih ederler."
+    },
+    "zihinsel": {
+        "name": "Zihinsel",
+        "description": "Vücut enerjilerini kullanmalarıyla birlikte içlerindeki enerji ile yıkılmaz güçlere ..."
+    }
+  },
+  "ninja":{
+  "yakindovus": {
+        "name": "Yakın Dövüş",
+        "description": "Bıçakları kendi parçası gibi kullanmayı başaran ve hızı ile ulaşılması güç hedeflere ..."
+    },
+  "uzakdovus": {
+        "name": "Uzak Dövüş",
+        "description": "Yay kullanımı ile ün salan bu ninjaların oklarından korunmak için hala bir çare bulunmamıştır."
+    }
+  },
+  "sura": {
+  "buyulusilah": {
+        "name": "Büyülü Silah",
+        "description": "Büyü ile çalışmalarında çok farklı büyü türlerini keşfetmesi ve büyüler ile silahlarını..."
+    },
+  "karabuyu": {
+        "name": "Kara Büyü",
+        "description": "Büyü ile çalışmalarında büyünün karanlık yüzü ile karşılaştığı söylentiler arasındadır."
+    }
+  },
+  "saman":{
+  "ejderhagucu": {
+        "name": "Ejderha Gücü",
+        "description": "Rakiplerine sahip olduğu ejderha güçleriyle saldırabilir. Dostlarına, yetenekleriyle..."
+    },
+  "iyilestirmeci": {
+        "name": "İyileştirmeci",
+        "description": "Rakiplerine sahip olduğu şimşek güçleriyle saldırabilir. Dostlarına hareket hızı..."
+    }
+  }  
+}

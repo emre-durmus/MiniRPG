@@ -1,0 +1,567 @@
+{
+    "dummy": {
+        "name": "Dummy",
+        "exp": 10,
+        "money": 20,
+        "base_stats": {
+            "strength": 10,
+            "vitality": 10,
+            "resistance": 10,
+            "spirit": 10,
+            "agility": 10,
+            "intelligence": 10
+        },
+        "mod_stats": {
+            "strength": 0,
+            "vitality": 0,
+            "resistance": 50,
+            "spirit": 0,
+            "agility": 0,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": [],
+            "helmet": [],
+            "chestplate": [],
+            "boots": []
+        },
+        "abilities": [{
+            "id": "default",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "bread",
+            "pack": 1,
+            "weight": 1
+        }]
+    },
+    "yabaniUsak": {
+        "name": "Yabani Uşak",
+        "exp": 8,
+        "money": 5,
+        "base_stats": {
+            "strength": 4,
+            "vitality": 8,
+            "resistance": 10,
+            "spirit": 5,
+            "agility": 8,
+            "intelligence": 4
+        },
+        "mod_stats": {
+            "strength": 0,
+            "vitality": 0,
+            "resistance": 0,
+            "spirit": 0,
+            "agility": 2,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "kirmizi_iksir",
+            "pack": 1,
+            "weight": 1
+        }]
+    },
+    "wolf": {
+        "name": "Wolf",
+        "exp": 10,
+        "money": 3,
+        "base_stats": {
+            "strength": 9,
+            "vitality": 10,
+            "resistance": 6,
+            "spirit": 7,
+            "agility": 10,
+            "intelligence": 2
+        },
+        "mod_stats": {
+            "strength": 0,
+            "vitality": 0,
+            "resistance": 0,
+            "spirit": 3,
+            "agility": 2,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "basic_fang",
+            "pack": 1,
+            "weight": 1
+        }]
+    },
+    "vahsiOkcu": {
+        "name": "Vahşi Okçu",
+        "exp": 9,
+        "money": 8,
+        "base_stats": {
+            "strength": 5,
+            "vitality": 8,
+            "resistance": 5,
+            "spirit": 6,
+            "agility": 10,
+            "intelligence": 4
+        },
+        "mod_stats": {
+            "strength": 0,
+            "vitality": 0,
+            "resistance": 0,
+            "spirit": 0,
+            "agility": 4,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "kirmizi_iksir",
+            "pack": 1,
+            "weight": 1
+        }]
+    },
+    "b_VahsiUzman": {
+        "name": "[Patron]Vahşi Uzman",
+        "exp": 30,
+        "money": 50,
+        "base_stats": {
+            "strength": 15,
+            "vitality": 30,
+            "resistance": 20,
+            "spirit": 12,
+            "agility": 20,
+            "intelligence": 6
+        },
+        "mod_stats": {
+            "strength": 0,
+            "vitality": 0,
+            "resistance": 0,
+            "spirit": 0,
+            "agility": 0,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "kirmizi_iksir",
+            "pack": 2,
+            "weight": 1
+        }]
+    },
+    "siyahRuzgarAskeri": {
+        "name": "Siyah Rüzgar Askeri",
+        "exp": 9,
+        "money": 9,
+        "base_stats": {
+            "strength": 4,
+            "vitality": 12,
+            "resistance": 8,
+            "spirit": 10,
+            "agility": 7,
+            "intelligence": 1
+        },
+        "mod_stats": {
+            "strength": 2,
+            "vitality": 2,
+            "resistance": 0,
+            "spirit": 2,
+            "agility": 2,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "kirmizi_iksir",
+            "pack": 1,
+            "weight": 1
+        },
+        {
+            "id": "kirmizi_iksir",
+            "pack": 2,
+            "weight": 1
+        }]
+    },
+    "yavru_orumcek": {
+        "name": "Yavru Örümcek",
+        "exp": 10,
+        "money": 12,
+        "base_stats": {
+            "strength": 5,
+            "vitality": 13,
+            "resistance": 8,
+            "spirit": 18,
+            "agility": 8,
+            "intelligence": 2
+        },
+        "mod_stats": {
+            "strength": 1,
+            "vitality": 4,
+            "resistance": 0,
+            "spirit": 3,
+            "agility": 2,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 3
+        },
+        {
+            "id": "acid_spin",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "orumcek_gozleri",
+            "pack": 1,
+            "weight": 1
+        }]
+    },
+    "vahsi_akrep_adam": {
+        "name": "Vahşi Akrep Adam",
+        "exp": 12,
+        "money": 15,
+        "base_stats": {
+            "strength": 12,
+            "vitality": 15,
+            "resistance": 8,
+            "spirit": 12,
+            "agility": 12,
+            "intelligence": 2
+        },
+        "mod_stats": {
+            "strength": 5,
+            "vitality": 2,
+            "resistance": 0,
+            "spirit": 3,
+            "agility": 2,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 4
+        },
+        {
+            "id": "acid_flame",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "seftali_cicegi",
+            "pack": 1,
+            "weight": 1
+        }]
+    },
+    "col_haydutu": {
+        "name": "Çöl Haydutu",
+        "exp": 55,
+        "money": 50,
+        "base_stats": {
+            "strength": 15,
+            "vitality": 35,
+            "resistance": 10,
+            "spirit": 15,
+            "agility": 15,
+            "intelligence": 3
+        },
+        "mod_stats": {
+            "strength": 5,
+            "vitality": 5,
+            "resistance": 0,
+            "spirit": 3,
+            "agility": 2,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "front_attack",
+            "weight": 3
+        },
+        {
+            "id": "acid_flame",
+            "weight": 1
+        },
+        {
+            "id": "acid_spin",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "slimy_crown",
+            "pack": 1,
+            "weight": 0.5,
+            "type": "equip"
+        }]
+    },
+    "shadow_rat": {
+        "name": "Test Canavar",
+        "exp": 19,
+        "money": 8,
+        "base_stats": {
+            "strength": 13,
+            "vitality": 10,
+            "resistance": 7,
+            "spirit": 10,
+            "agility": 15,
+            "intelligence": 8
+        },
+        "mod_stats": {
+            "strength": 2,
+            "vitality": 0,
+            "resistance": 0,
+            "spirit": 1,
+            "agility": 3,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "bite",
+            "weight": 2
+        },
+        {
+            "id": "toxic_spite",
+            "weight": 1
+        },
+        {
+            "id": "gust",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "rat_tail",
+            "pack": 1,
+            "weight": 2
+        }]
+    },
+    "fallen_knight": {
+        "name": "Test Canavar",
+        "exp": 22,
+        "money": 15,
+        "base_stats": {
+            "strength": 18,
+            "vitality": 15,
+            "resistance": 10,
+            "spirit": 7,
+            "agility": 7,
+            "intelligence": 2
+        },
+        "mod_stats": {
+            "strength": 3,
+            "vitality": 3,
+            "resistance": 2,
+            "spirit": 1,
+            "agility": 1,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "slash",
+            "weight": 2
+        },
+        {
+            "id": "shadow_slash",
+            "weight": 1
+        },
+        {
+            "id": "gust",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "broken_sword",
+            "pack": 1,
+            "weight": 0.2,
+            "type": "equip"
+        },
+        {
+            "id": "old_helmet",
+            "pack": 1,
+            "weight": 0.1,
+            "type": "equip"
+        },
+        {
+            "id": "old_chestplate",
+            "pack": 1,
+            "weight": 0.1,
+            "type": "equip"
+        },
+        {
+            "id": "old_boots",
+            "pack": 1,
+            "weight": 0.1,
+            "type": "equip"
+        }]
+    },
+    "fallen_archer": {
+        "name": "Test Canavar",
+        "exp": 22,
+        "money": 15,
+        "base_stats": {
+            "strength": 14,
+            "vitality": 10,
+            "resistance": 6,
+            "spirit": 8,
+            "agility": 19,
+            "intelligence": 8
+        },
+        "mod_stats": {
+            "strength": 3,
+            "vitality": 1,
+            "resistance": 2,
+            "spirit": 1,
+            "agility": 3,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "arrow",
+            "weight": 2
+        },
+        {
+            "id": "fire_arrow",
+            "weight": 1
+        },
+        {
+            "id": "gust",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "broken_bow",
+            "pack": 1,
+            "weight": 0.2,
+            "type": "equip"
+        },
+        {
+            "id": "old_helmet",
+            "pack": 1,
+            "weight": 0.1, 
+            "type": "equip"
+        },
+        {
+            "id": "old_chestplate",
+            "pack": 1,
+            "weight": 0.1,
+            "type": "equip"
+        },
+        {
+            "id": "old_boots",
+            "pack": 1,
+            "weight": 0.1,
+            "type": "equip"
+        }]
+    },
+    "lost_soul": {
+        "name": "Test Canavar",
+        "exp": 55,
+        "money": 100,
+        "base_stats": {
+            "strength": 25,
+            "vitality": 70,
+            "resistance": 15,
+            "spirit": 15,
+            "agility": 12,
+            "intelligence": 5
+        },
+        "mod_stats": {
+            "strength": 4,
+            "vitality": 3,
+            "resistance": 2,
+            "spirit": 2,
+            "agility": 1,
+            "intelligence": 0
+        },
+        "equipment": {
+            "weapon": null,
+            "helmet": null,
+            "chestplate": null,
+            "boots": null
+        },
+        "abilities": [{
+            "id": "shadow_slash",
+            "weight": 2
+        },
+        {
+            "id": "toxic_spite",
+            "weight": 1
+        },
+        {
+            "id": "haste",
+            "weight": 0.5
+        },
+        {
+            "id": "fallen_lionheart_slash",
+            "weight": 1
+        }],
+        "loots": [{
+            "id": "lionheart_sword",
+            "pack": 1,
+            "weight": 1,
+            "type": "equip"
+        }]
+    }
+}

@@ -1,0 +1,82 @@
+{
+    "savasci": {
+        "name": "Savaşçı",
+        "description": "Becerileri ve ağır zırhlarıyla yakın dövüş konusunda büyük rol oynarlar.",
+        "base_stats": {
+            "strength": 15,
+            "vitality": 25,
+            "resistance": 14,
+            "spirit": 8,
+            "agility": 6,
+            "intelligence": 5
+        },
+        "mult_stats": {
+            "strength": 2,
+            "vitality": 2.5,
+            "resistance": 1.7,
+            "spirit": 0.5,
+            "agility": 0.5,
+            "intelligence": 0.2
+        }
+    },
+    "ninja": {
+        "name": "Ninja",
+        "description": "Ninjalar pusu kurarak saldırabilen profesyonel suikastçilerdir.",
+        "base_stats": {
+            "strength": 12,
+            "vitality": 16,
+            "resistance": 6,
+            "spirit": 14,
+            "agility": 14,
+            "intelligence": 8
+        },
+        "mult_stats": {
+            "strength": 1.2,
+            "vitality": 1.5,
+            "resistance": 0.8,
+            "spirit": 2,
+            "agility": 1.8,
+            "intelligence": 0.6
+        }
+    },
+    "sura": {
+        "name": "Sura",
+        "description": "Kötülük tohumunu kollarında büyütmeye karar verdiklerinde sihirli güçler kazanan savaşçılardır.",
+        "base_stats": {
+            "strength": 4,
+            "vitality": 18,
+            "resistance": 12,
+            "spirit": 10,
+            "agility": 8,
+            "intelligence": 18
+        },
+        "mult_stats": {
+            "strength": 0.3,
+            "vitality": 2.0,
+            "resistance": 1.4,
+            "spirit": 1.2,
+            "agility": 1.0,
+            "intelligence": 2.5
+        }
+    },
+    "saman": {
+        "name": "Şaman",
+        "description": "Zekidirler, büyü ve sihir kullanırlar. Savaşırken, mistik güçleri çok etkilidir.",
+        "base_stats": {
+            "strength": 6,
+            "vitality": 22,
+            "resistance": 14,
+            "spirit": 8,
+            "agility": 8,
+            "intelligence": 12
+        },
+        "mult_stats": {
+            "strength": 0.6,
+            "vitality": 2.5,
+            "resistance": 1.7,
+            "spirit": 0.8,
+            "agility": 0.8,
+            "intelligence": 1.6
+        }
+    }
+}

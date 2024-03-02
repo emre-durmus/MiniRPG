@@ -1,0 +1,76 @@
+{
+"satici": {
+    "id": "satici",
+    "name": "Satıcı",
+    "rarity": 1,
+    "buy_only_one" : 0,
+    "picture" : "https://i.hizliresim.com/h4ssjv2.png",
+    "items": {
+        "kirmizi_iksir": {
+            "id": "kirmizi_iksir",
+            "name": "Kırmızı İksir",
+            "cost": 2,
+            "type": "consumable",
+            "picture": "https://img.m2icondb.com/27003.png"
+        }
+    }
+},
+"silahci": {
+    "id": "silahci",
+    "name": "Silahçı",
+    "rarity": 1,
+    "buy_only_one" : 1,
+    "picture" : "https://i.hizliresim.com/iey5e0w.png",
+    "items": {
+        "kilic_0": {
+            "id": "kilic_0",
+            "name": "Kılıç +0",
+            "cost": 10,
+            "type": "weapon",
+            "picture": "https://img.m2icondb.com/00010.png"
+        }
+    }
+},
+"zirhci": {
+    "id": "zirhci",
+    "name": "Zırhçı",
+    "rarity": 1,
+    "buy_only_one" : 1,
+    "picture" : "https://i.hizliresim.com/1lj8hyo.png",
+    "items": {
+        "kesis_plaka_zirh_0": {
+            "id": "kesis_plaka_zirh_0",
+            "name": "Keşiş Plaka Zırh +0",
+            "cost": 10,
+            "type": "chestplate",
+            "picture": "https://img.m2icondb.com/11200.png"
+        }
+    }
+},
+"main_shop2": {
+    "id": "main_shop2",
+    "name": "Main Shop 2",
+    "rarity": 2,
+    "buy_only_one" : 0,
+    "items": {
+        "item4": {
+            "id": "item4",
+            "name": "Item 4",
+            "cost": 100,
+            "type": "weapon"
+        },
+        "item5": {
+            "id": "item5",
+            "name": "Item 5",
+            "cost": 200,
+            "type": "consumable"
+        },
+        "item6": {
+            "id": "item6",
+            "name": "Item 6",
+            "cost": 10,
+            "type": "key-item"
+        }
+    }
+}
+}

@@ -1,0 +1,60 @@
+{
+    "welcome_birincikoy": [{
+        "id": "welcome_birincikoy_1",
+        "type": {
+            "name": "follow-up"
+        },
+        "embed": {
+            "description": "Birinci köye hoş geldin, maceracı!"
+        }
+    },
+    {
+        "id": "welcome_birincikoy_2",
+        "type": {
+            "name": "end-discussion"
+        },
+        "embed": {
+            "description": "Senin için bir kırmızı iksir!"
+        },
+        "rewards": [{
+            "type": "item",
+            "id": "kirmizi_iksir",
+            "amount": 1
+        }]
+    }],
+    "choice": [{
+        "id": "ask",
+        "type": {
+            "name": "multiple-choice",
+            "choices": [{
+                "id": "ask_1",
+                "text": "Ah..Adım neydi ?"
+            },
+            {
+                "id": "ask_2",
+                "text": "Neredeyim ben?"
+            }]
+        },
+        "embed": {
+            "description": "Ne sormak istiyorsun?"
+        }
+    },
+    {
+        "id": "ask_1",
+        "type": {
+            "name": "end-discussion"
+        },
+        "embed":{
+            "description": "Ben ejderha tanrısının elçisiyim! Tanıştığıma sevindim."
+        }
+    },
+    {
+        "id": "ask_2",
+        "type": {
+            "name": "end-discussion"
+        },
+        "embed":{
+            "description": "Şu an insanlığın son dayanak kalesindesin!"
+        }
+    }]
+}

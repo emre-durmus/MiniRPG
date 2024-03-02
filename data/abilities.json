@@ -1,0 +1,828 @@
+{
+  "debugger": {
+    "name": "The Debugger",
+    "number":0,
+    "aim": "enemy-single",
+    "description": "A ability only used when the developers need to test something. Unobtainable.",
+    "effects": {
+      "cooldown": 10,
+      "phys_damage": 40
+    }
+  },
+  "front_attack": {
+    "name": "Düz Saldırı",
+    "number":2,
+    "aim": "enemy-single",
+    "description": "A basic attack where the caster charges forward.",
+    "effects": {
+      "cooldown": 12,
+      "phys_damage": 2
+    }
+  },
+  "acid_spin": {
+    "name": "Asit Dönüşü",
+    "number":6,
+    "aim": "enemy-aoe",
+    "description": "A spin attack that spits acid.",
+    "effects": {
+      "cooldown": 20,
+      "phys_damage": 5
+    }
+  },
+  "acid_flame": {
+    "name": "Asit Saldırısı",
+    "number":7,
+    "aim": "enemy-single",
+    "description": "An acid flame attack.",
+    "effects": {
+      "cooldown": 30,
+      "phys_damage": 12
+    }
+  },
+  "bite": {
+    "name": "Isırık",
+    "number":3,
+    "aim": "enemy-single",
+    "description": "A strong bite.",
+    "effects": {
+      "cooldown": 16,
+      "phys_damage": 6
+    }
+  },
+  "peck": {
+    "name": "Peck",
+    "number":4,
+    "aim": "enemy-single",
+    "description": "A small peck.",
+    "effects": {
+      "cooldown": 16,
+      "phys_damage": 6
+    }
+  },
+  "roll": {
+    "name": "Roll",
+    "number":12,
+    "aim": "enemy-single",
+    "description": "A roll that increases the caster's defense.",
+    "effects": {
+      "cooldown": 20,
+      "phys_damage": 5,
+      "buff_stats": {
+        "defense": {
+          "value": 5,
+          "duration": 3
+        }
+      }
+    }
+  },
+  "double_roll": {
+    "name": "Double Roll",
+    "number":13,
+    "aim": "enemy-aoe",
+    "description": "A double roll that increases the caster's defense.",
+    "effects": {
+      "cooldown": 30,
+      "phys_damage": 10,
+      "buff_stats": {
+        "defense": {
+          "value": 10,
+          "duration": 3
+        }
+      }
+    }
+  },
+  "default": {
+    "name": "Struggle",
+    "number":1,
+    "aim": "self",
+    "description": "Is just struggling",
+    "effects": {
+      "cooldown": 10
+    }
+  },
+  "slash": {
+    "name": "Düz Vuruş",
+    "number":5,
+    "aim": "enemy-single",
+    "description": "Düz bir saldırı. Basit ama etkili.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "light_heal": {
+    "name": "Light Heal",
+    "number":8,
+    "aim": "ally+self-single",
+    "description": "A basic heal.",
+    "effects": {
+      "cooldown": 20,
+      "heal": {
+        "value": 10
+      }
+    }
+  },
+  "purification": {
+    "name": "Purification",
+    "number":9,
+    "aim": "ally-aoe",
+    "description": "A purification spell that heals all allies.",
+    "effects": {
+      "cooldown": 30,
+      "heal": {
+        "value": 20
+      }
+    }
+  }, 
+  "gust": {
+    "name": "Gust",
+    "number":10,
+    "aim": "ally-single",
+    "description": "A buff that increases the caster's speed.",
+    "effects": {
+      "cooldown": 15,
+      "buff_stats": {
+        "agility": {
+          "value": 8,
+          "duration": 3
+        }
+      }
+    }
+  },
+  "haste": {
+    "name": "Haste",
+    "number":11,
+    "aim": "ally+self-aoe",
+    "description": "A buff that increases the speed of all allies.",
+    "effects": {
+      "cooldown": 30,
+      "buff_stats": {
+        "agility": {
+          "value": 5,
+          "duration": 3
+        }
+      }
+    }
+  },
+  "toxic_spite": {
+    "name": "Toxic Spite",
+    "number":"12",
+    "aim": "enemy-single",
+    "description": "A spell that deals damage and poisons the target.",
+    "effects": {
+      "cooldown": 10,
+      "phys_damage": 10,
+      "poison": {
+        "situation": "after",
+        "value": 5,
+        "duration": 3
+      }
+    }
+  },
+  "shadow_slash": {
+    "name": "Shadow Slash",
+    "number":"13",
+    "aim": "enemy-single",
+    "description": "A slash that deals damage and lowers the target's defense.",
+    "effects": {
+      "cooldown": 15,
+      "phys_damage": 12,
+      "poison": {
+        "situation": "after",
+        "value": 3,
+        "duration": 3
+      }
+    }
+  },
+  "arrow": {
+    "name": "Arrow",
+    "number":"14",
+    "aim": "enemy-single",
+    "description": "A basic arrow attack.",
+    "effects": {
+      "cooldown": 8,
+      "phys_damage": 8
+    }
+  },
+  "fire_arrow": {
+    "name": "Fire Arrow",
+    "number":"15",
+    "aim": "enemy-single",
+    "description": "An arrow that deals damage and burns the target.",
+    "effects": {
+      "cooldown": 15,
+      "phys_damage": 12,
+      "burn": {
+        "situation": "before",
+        "value": 3,
+        "duration": 3
+      }
+    }
+  },
+  "fallen_lionheart_slash": {
+    "name": "Fallen Lionheart's Slash",
+    "number":"16",
+    "aim": "enemy-aoe",
+    "description": "A powerful slash that deals tremendous damage and poisons them.",
+    "effects": {
+      "cooldown": 30,
+      "phys_damage": 20,
+      "poison": {
+        "situation": "after",
+        "value": 5,
+        "duration": 3
+      }
+    }
+  },
+  "hamle": {
+    "name": "Hamle",
+    "number":"17",
+    "aim": "enemy-single",
+    "description": "Hedef canı %15'in altındaysa 2 kat hasar verir. Hedefi yavaşlatır",
+    "effects": {
+      "cooldown": 12,
+      "phys_low_health_damage": 16,
+      "slow": 10
+    }
+  },
+  "kiliccevirme": {
+    "name": "Kılıç Çevirme",
+    "number":"18",
+    "aim": "enemy-aoe",
+    "description": "Kılıcını kendi etrafında çevirerek saldırır. Birden fazla hedefe hasar verebilir.",
+    "effects": {
+      "cooldown": 20,
+      "phys_damage": 10
+    }
+  },
+  "holy_guard": {
+    "name": "Holy Guard",
+    "number":"19",
+    "aim": "ally-single",
+    "description": "A buff that increases the target's defense.",
+    "effects": {
+      "cooldown": 15,
+      "earn_solar_gauge": 7,
+      "buff_stats": {
+        "defense": {
+          "type": "percentage",
+          "value": 5,
+          "duration": 3
+        }
+      }
+    }
+  },
+  "holy_thrust": {
+    "name": "Holy Thrust",
+    "number":"20",
+    "aim": "enemy-single",
+    "description": "Consumes 10 holy gauge to increase its damage",
+    "effects": {
+      "cooldown": 15,
+      "holy_thrust": 1,
+      "buff_stats": {
+        "strength": {
+          "type": "percentage",
+          "value": 5,
+          "duration": 3
+        }
+      }
+    }
+  },
+  "suikast": {
+    "name": "Suikast",
+    "number":"21",
+    "aim": "enemy-single",
+    "description": "Hasar veren yanıp sönen bir bıçak.",
+    "effects": {
+      "cooldown": 15,
+      "restless_stab": 10
+    }
+  },
+  "sand_sweep": {
+    "name": "Sand Sweep",
+    "number":"22",
+    "aim": "enemy-single",
+    "description": "The caster sends a sand wave that slows the enemy.",
+    "effects": {
+      "slow": 10
+    }
+  },
+  "thrust": {
+    "name": "Thrust",
+    "number":"23",
+    "aim": "enemy-single",
+    "description": "A basic thrust attack.",
+    "effects": {
+      "cooldown": 8,
+      "phys_damage": 8
+    }
+  },
+  "quick_slash": {
+    "name": "Quick Slash",
+    "number":"24",
+    "aim": "enemy-single",
+    "description": "A slash optimized to surprise the enemy by its speed.",
+    "effects": {
+      "cooldown": 6,
+      "phys_damage": 6
+    }
+  },
+  "poison_bite": {
+    "name": "Poison Bite",
+    "number":"25",
+    "aim": "enemy-single",
+    "description": "An attack designed to poison the target.",
+    "effects": {
+      "cooldown": 10,
+      "poison": {
+        "situation": "after",
+        "value": 5,
+        "duration": 3
+      }
+    }
+  },
+  "wind_spell": {
+    "name": "Wind Spell",
+    "number":"26",
+    "aim": "enemy-single",
+    "description": "The most basic magic spell, deals damage.",
+    "effects": {
+      "cooldown": 15,
+      "phys_damage": 10
+    }
+  },
+  "brush_cut": {
+    "name": "Brush Cut",
+    "number":"27",
+    "aim": "enemy-single",
+    "description": "A basic paint ability that uses paint to increase its damage.",
+    "effects": {
+      "cooldown": 15,
+      "brush_cut": 8
+    }
+  },
+  "decoloration": {
+    "name": "Decoloration",
+    "number":"28",
+    "aim": "enemy-single",
+    "description": "Uses a paint technique to remove paint from the target and lower its intelligence.",
+    "effects": {
+      "cooldown": 15,
+      "decoloration": 1
+    }
+  },
+  "splatter": {
+    "name": "Splatter",
+    "number":"29",
+    "aim": "enemy-single",
+    "description": "An all-out paint attack that deals damage if the target has a least 2 paint layers.",
+    "effects": {
+      "cooldown": 15,
+      "splatter": 20
+    }
+  },
+  "paint_festival": {
+    "name": "Paint Festival",
+    "number":"30",
+    "aim": "all-aoe",
+    "description": "Sends paint in every direction, painting everyone on the battlefield",
+    "effects": {
+      "paint_festival": 1
+    }
+  },
+  "blood_needle": {
+    "name": "Blood Needle",
+    "number":"31",
+    "aim": "enemy-single",
+    "description": "Sacrifices some of your health for damage",
+    "effects": {
+      "cooldown": 15,
+      "phys_damage": 12,
+      "self_damage": {
+        "value": 4,
+        "type": "percentage",
+        "until": 40,
+        "untilDeath": false
+      }
+    }
+  },
+  "life_bulb": {
+    "name": "Life Bulb",
+    "number":"32",
+    "aim": "self",
+    "description": "A healing spell that heals lightly the caster.",
+    "effects": {
+      "cooldown": 15,
+      "heal": {
+        "value": 10,
+        "type": "percentage-full"
+      }
+    }
+  },
+  "hemoglojab": {
+    "name": "Hemoglojab",
+    "number":"33",
+    "aim": "enemy-single",
+    "description": "A basic magic attack that deals damage and lowers the target's defense.",
+    "effects": {
+      "cooldown": 15,
+      "phys_damage": 16,
+      "self_damage": {
+        "value": 9,
+        "type": "percentage",
+        "untilDeath": true
+      }
+    }
+  },
+  "ucyonlu": {
+    "name": "Üç Yönlü Kesme",
+    "number":"34",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe doğru 3 saldırıda bulunur. Birden fazla hedefe hasar verebilir.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ruhvurusu": {
+    "name": "Ruh Vuruşu",
+    "number":"35",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe doğru güçlü bir saldırıda bulunur. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "siddetlivurus": {
+    "name": "Şiddetli Vuruş",
+    "number":"36",
+    "aim": "enemy-single",
+    "description": "Seçilen hedefe doğru orta-uzun menzilli saldırıda bulunur.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "gucluvurus": {
+    "name": "Güçlü Vuruş",
+    "number":"37",
+    "aim": "enemy-aoe",
+    "description": "Yere vurarak etrafındaki hedeflere hasar verir. Birden fazla hedefe hasar verebilir.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "kilicdarbesi": {
+    "name": "Kılıç Darbesi",
+    "number":"38",
+    "aim": "enemy-single",
+    "description": "Seçilen hedefe uzaktan saldırarak, onu yüksek ihtimalle sersemletir. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "bicakcevirme": {
+    "name": "Bıçak Çevirme",
+    "number":"39",
+    "aim": "enemy-single",
+    "description": "Seçilen hedefe doğru taklalar atarak bu sırada silahını savurur. Zehirleme şansına sahiptir. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "hizlisaldiri": {
+    "name": "Hızlı Saldırı",
+    "number":"40",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe yüksek bir hızla atılarak saldırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "zehirlibulut": {
+    "name": "Zehirli Bulut",
+    "number":"41",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe yüksek yoğunlukta bir zehir bulutuyla saldırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "atesliok": {
+    "name": "Ateşli Ok",
+    "number":"42",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe tutuşturulmuş bir ok ile saldırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "zehirliok": {
+    "name": "Zehirli Ok",
+    "number":"43",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe zehirlenmiş bir ok ile saldırır ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "tekrarlananatis": {
+    "name": "Tekrarlanan Atış",
+    "number":"44",
+    "aim": "enemy-single",
+    "description": "Seçilen hedefe birden fazla oku art arda atarak saldırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "okyagmuru": {
+    "name": "Ok Yağmuru",
+    "number":"45",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe doğru yatay düzlemde birden fazla ok atarak birden fazla hedefe saldırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "buyulukeskinlik": {
+    "name": "Büyülü Keskinlik",
+    "number":"46",
+    "aim": "self",
+    "description": "SAçık kaldığı süre boyunca saldırı değerini artırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "buyuluzirh": {
+    "name": "Büyülü Zırh",
+    "number":"47",
+    "aim": "self",
+    "description": "Bir süreliğine savunma değerini artırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "dehset": {
+    "name": "Dehşet",
+    "number":"48",
+    "aim": "enemy-aoe",
+    "description": "Normal saldırılardan ve Canavarlardan alınan hasarı azaltır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "parmakdarbesi": {
+    "name": "Parmak Darbesi",
+    "number":"49",
+    "aim": "enemy-single",
+    "description": "Seçilen hedefe kılıç kullanmayan eli ile saldırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ejderhadonusu": {
+    "name": "Ejderha Dönüşü",
+    "number":"50",
+    "aim": "enemy-aoe",
+    "description": "Bir Kasırga oluşturarak etrafındaki hedeflere hasar verir.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "buyucozme": {
+    "name": "Büyü Çözme",
+    "number":"51",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe karanlık bir büyü ile saldırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ateshayaleti": {
+    "name": "Ateş Hayaleti",
+    "number":"52",
+    "aim": "enemy-aoe",
+    "description": "Etrafında dönen ateşten bir hayalet çağırır. Rastgele bir hedefe saldırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "karanlikvurus": {
+    "name": "Karanlık Vuruş",
+    "number":"53",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe karanlık bir büyü ile saldırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "karanlikkure": {
+    "name": "Karanlık Küre",
+    "number":"54",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe yoğun karanlık enerjiyle dolu bir küre ile saldırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "hayaletvurusu": {
+    "name": "Hayalet Vuruşu",
+    "number":"55",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe karanlık bir büyü ile saldırır. Yavaşlatma Şansına sahiptir.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "karanlikkoruma": {
+    "name": "Karanlık Koruma",
+    "number":"56",
+    "aim": "self",
+    "description": "Karanlık bir büyü ile seni korumaya alır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "alevvurusu": {
+    "name": "Alev Vuruşu",
+    "number":"57",
+    "aim": "enemy-aoe",
+    "description": "Bir alev patlaması oluşturarak etrafındaki hedeflere hasar verir.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ejderhakukremesi": {
+    "name": "Ejderha Kükremesi",
+    "number":"58",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefin bulunduğu konuma ejderhalar çağırarak hedefe hasar verir. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ejderhaatisi": {
+    "name": "Ejderha Atışı",
+    "number":"59",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe bir ejderha ile saldırır.Birden fazla hedefe hasar verebilir.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ejderhayardimi": {
+    "name": "Ejderha Yardımı",
+    "number":"60",
+    "aim": "ally",
+    "description": "Tüm grup üyelerini kritik Vuruş Şansı özelliğini artıran bir büyüyle kutsar.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ucantilsim": {
+    "name": "Uçan Tılsım",
+    "number":"61",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe bir tılsım ile saldırır. Kısa süreli Yavaşlatma Şansına sahiptir.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "kutsama": {
+    "name": "Kutsama",
+    "number":"62",
+    "aim": "ally",
+    "description": "Tüm grup üyelerini yakın dövüş saldırı direnci özelliği sağlayan bir büyüyle kutsar.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "yansitma": {
+    "name": "Yansıtma",
+    "number":"63",
+    "aim": "ally",
+    "description": "Tüm grup üyelerini yakın dövüş vuruşlarını yansıtma şansı özelliğini artıran bir büyüyle kutsar.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "cabukluk": {
+    "name": "Çabukluk",
+    "number":"64",
+    "aim": "enemy-aoe",
+    "description": "Tüm grup üyelerini Hareket Hızı ve Büyü Hızı özelliklerini artıran bir büyüyle kutsar.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "saldiri": {
+    "name": "Saldırı+",
+    "number":"65",
+    "aim": "enemy-aoe",
+    "description": "Tüm grup üyelerini Saldırı Değeri özelliğini artıran bir büyüyle kutsar.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "sifa": {
+    "name": "Şifa",
+    "number":"66",
+    "aim": "enemy-aoe",
+    "description": "Tüm grup üyelerine HP yükleyen ve negatif etkileri kaldıran bir büyü yapar.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "simsekcagirma": {
+    "name": "Şimşek Çağırma",
+    "number":"67",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefin üzerine yoğun yüklü bulutu çağırarak hedefe şimşeklerle saldırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "simsekatma": {
+    "name": "Şimşek Atma",
+    "number":"68",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe bir şimşek topu ile saldırır. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "simsekcagirma": {
+    "name": "Şimşek Çağırma",
+    "number":"69",
+    "aim": "enemy-aoe",
+    "description": "Seçilen hedefe bir şimşek ile saldırır, diğer hedeflere sekebilir. ",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "havakilici": {
+    "name": "Hava Kılıcı",
+    "number":"70",
+    "aim": "self",
+    "description": "Efsanevi hava kılıcı. Bir süreliğine saldırı değerini artırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "ofke": {
+    "name": "Öfke",
+    "number":"71",
+    "aim": "self",
+    "description": "Hareket Hızı ve Saldırı Hızını artırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  },
+  "guclubeden": {
+    "name": "Güçlü Beden",
+    "number":"72",
+    "aim": "self",
+    "description": "Efsanevi güçlü beden. Bir süreliğine savunma değerini artırır.",
+    "effects": {
+      "cooldown": 5,
+      "phys_damage": 8
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+    "dev_staff": {
+        "id": "dev_staff",
+        "name": "Dev Staff",
+        "description": "The Dev Staff is a developer-only weapon.",
+        "caracteristics": {
+            "raw_buff_int": 1000000
+        }
+    },
+    "capital_sword": {
+        "id": "capital_sword",
+        "name": "Sword of the Capital",
+        "description": "The Capital Sword is a basic weapon given to all beginner warriors in La Capitale.",
+        "caracteristics": {
+            "raw_buff_vit": 1,
+            "raw_buff_str": 2
+        }
+    },
+    "iron_fang": {
+        "id": "iron_fang",
+        "name": "Iron Fang",
+        "description": "The Iron Fang is a basic weapon given to all beginner assassins in La Capitale.",
+        "caracteristics": {
+            "raw_buff_agi": 1,
+            "raw_buff_dex": 2
+        }
+    },
+    "apprentice_book": {
+        "id": "apprentice_book",
+        "name": "Apprentice Book",
+        "description": "The Apprentice Book is a basic weapon given to all beginner mages in La Capitale.",
+        "caracteristics": {
+            "raw_buff_int": 2,  
+            "raw_buff_res": 1
+        }
+    },
+    "wooden_staff": {
+        "id": "church_staff",
+        "name": "Staff of the Church",
+        "description": "The Church Staff is a basic weapon given to all beginner clerics in La Capitale.",
+        "caracteristics": {
+            "raw_buff_int": 1,
+            "raw_buff_res": 2
+        }
+    },
+    "hunter_bow": {
+        "id": "hunter_bow",
+        "name": "Hunter's Bow",
+        "description": "The Hunter's Bow is a basic weapon given to all beginner archers in La Capitale.",
+        "caracteristics": {
+            "raw_buff_agi": 2,
+            "raw_buff_dex": 1
+        }
+    },
+    "broken_sword": {
+        "id": "broken_sword",
+        "name": "Broken Sword",
+        "description": "An old sword found in an old battlefield. It's not very useful, but it's better than nothing.",
+        "caracteristics": {
+            "raw_buff_vit": 3,
+            "raw_buff_str": 1
+        }
+    },
+    "broken_bow": {
+        "id": "broken_bow",
+        "name": "Broken Bow",
+        "description": "An old bow found in an old battlefield. It's not very useful, but it's better than nothing.",
+        "caracteristics": {
+            "raw_buff_agi": 1,
+            "raw_buff_dex": 3
+        }
+    },
+    "lionheart_sword": {
+        "id": "lionheart_sword",
+        "name": "Lionheart Sword",
+        "description": "The Lionheart Sword is a legendary weapon. It's said that it was forged by the Lionheart Family herself.",
+        "caracteristics": {
+            "raw_buff_vit": 7,
+            "raw_buff_str": 7
+        }
+    },
+      "kilic_0": {
+        "id": "kilic_0",
+        "name": "Kılıç +0",
+        "description": "Standart bir kılıç. Yeni başlayan maceracılara verilir",
+        "caracteristics": {
+            "raw_buff_str": 15
+        }
+    }
+}
