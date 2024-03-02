@@ -540,12 +540,13 @@ exports.createMonsterData = function(combat, monster) {
 
     if(i > 0) {
         dummy.id = monster + "-" + i;
-        dummy.name = mobData.name + " (" + i + ")";
+        dummy.name = mobData.name + " " +(i+1) ;
     } else {
         dummy.id = monster;
         dummy.name = mobData.name;
     }
 
+    dummy.picture = mobData.picture;
     dummy.health = dummy.stats.vitality;
     dummy.max_health = dummy.stats.vitality;
 
@@ -709,6 +710,7 @@ exports.rewardLoot = async function(combat, thread) {
         if(victor.type == "human") {
             const embed = new EmbedBuilder()
                 .setTitle( Client.client.users.cache.get(victor.id).username + ' Ödüllerin :')
+                .setThumbnail("https://i.hizliresim.com/f0wsdcb.png");
             player.exp.award(victor.id, totalExp, thread);
             player.giveMoney(victor.id, totalMoney);
             embed.setDescription(totalExp + " tecrübe puanı ve " + totalMoney + " yang kazandın !");

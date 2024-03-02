@@ -593,6 +593,7 @@ exports.combatLoop = async function(thread, combatData) {
 exports.finishTurn = async function(exeData) {
     const { combat, thread, casterId, targetId, ability, log } = exeData;
     const caster = util.getPlayerInCombat(casterId, combat);
+    console.log(caster);
     const target = util.getPlayerInCombat(targetId, combat);
     let embed = new EmbedBuilder();
 
@@ -603,7 +604,8 @@ exports.finishTurn = async function(exeData) {
         const avatar = "https://cdn.discordapp.com/avatars/" + user.id + "/" + user.avatar + ".png";
         embed.setAuthor({ name: caster.name + ", " + ability.name + " kullandı !", iconURL: avatar });
     } else {
-        embed.setAuthor({ name: caster.name + ", " + ability.name + " kullandı !" });
+        embed.setAuthor({ name: caster.name + ", " + ability.name + " kullandı !"});
+        embed.setThumbnail(caster.picture);
     }
 
     let hasDied = false;
