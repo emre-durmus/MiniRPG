@@ -30,7 +30,7 @@ client.once('ready', () => {
   ]
 
   client.user.setActivity("Başlatılıyor...", { type: ActivityType.Playing });
-  client.user.setAvatar('https://media.discordapp.net/attachments/1212586011033477152/1212869519089864754/animated-ezgif.com-crop.gif?ex=65f367c3&is=65e0f2c3&hm=95a8338edf6c96c3d6e8e1f6d9b3804ce1f35acc924391cb25026a7d68a90905&=');
+  //client.user.setAvatar('https://media.discordapp.net/attachments/1212586011033477152/1212869519089864754/animated-ezgif.com-crop.gif?ex=65f367c3&is=65e0f2c3&hm=95a8338edf6c96c3d6e8e1f6d9b3804ce1f35acc924391cb25026a7d68a90905&=');
   let i = 0;
   setInterval(() => {
     client.user.setActivity(statuses[i], { type: ActivityType.Playing });
