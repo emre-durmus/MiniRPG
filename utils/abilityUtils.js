@@ -194,7 +194,7 @@ function getStringActiveAbilities(abilities) {
             string += `# ${data[ability].number} - ${data[ability].name}\n`;
         }
     else
-        string = "No active abilities.";
+        string = "Aktif yetenek yok.";
 
     return string;
 }

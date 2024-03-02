@@ -92,12 +92,13 @@
     }
   },
   "default": {
-    "name": "Struggle",
-    "number":1,
-    "aim": "self",
-    "description": "Is just struggling",
+    "name": "Düz Vuruş",
+    "number":5,
+    "aim": "enemy-single",
+    "description": "Düz bir saldırı. Basit ama etkili.",
     "effects": {
-      "cooldown": 10
+      "cooldown": 5,
+      "phys_damage": 8
     }
   },
   "slash": {
@@ -760,16 +761,6 @@
     "number":"66",
     "aim": "enemy-aoe",
     "description": "Tüm grup üyelerine HP yükleyen ve negatif etkileri kaldıran bir büyü yapar.",
-    "effects": {
-      "cooldown": 5,
-      "phys_damage": 8
-    }
-  },
-  "simsekcagirma": {
-    "name": "Şimşek Çağırma",
-    "number":"67",
-    "aim": "enemy-aoe",
-    "description": "Seçilen hedefin üzerine yoğun yüklü bulutu çağırarak hedefe şimşeklerle saldırır.",
     "effects": {
       "cooldown": 5,
       "phys_damage": 8
