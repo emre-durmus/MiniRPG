@@ -12,7 +12,7 @@ module.exports = {
         if(await player.doesExists(author.id)) {
             const embed = new EmbedBuilder()
                 .setTitle("Yardım")
-                .setThumbnail("https://i.hizliresim.com/qqe1uos.png")
+                .setThumbnail("https://i.hizliresim.com/q7c6npz.png")
                 .setColor(0xADD8E6)
                 .addFields(
                     { name: "Hızlı Başlangıç", value: "Oyuna hızlıca atılmak istiyorsan öncelikle `mtp` ile ışınlanabilir ve ardından `ms` komutunu yazarak canavarlarla savaşabilirsin."},
@@ -28,7 +28,7 @@ module.exports = {
         } else {
             const newEmbed = new EmbedBuilder()
                 .setTitle("Yardım")
-                .setThumbnail("https://i.hizliresim.com/qqe1uos.png")
+                .setThumbnail("https://i.hizliresim.com/q7c6npz.png")
                 .setColor(0x1be118)
                 .setDescription("Aha.. Yeni bir maceracı mısın? Tanıştığıma sevindim! Eğer macerana şimdi başlamak istersen, `mbasla` yazarak macerana başlayabilirsin!")
                 .addFields(
